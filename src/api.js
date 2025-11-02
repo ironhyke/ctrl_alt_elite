@@ -2,8 +2,7 @@ import axios from "axios";
 import { logout } from "./shared/utils/auth";
 
 const apiClient = axios.create({
-  baseURL: "https://ctrl-alt-elite-6lbt.onrender.com/api"
-",
+  baseURL: "https://ctrl-alt-elite-6lbt.onrender.com/api",
   timeout: 100000,
 });
 
