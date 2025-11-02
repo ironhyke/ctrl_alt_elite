@@ -30,6 +30,7 @@ export const login = async (data) => {
     return await apiClient.post("/auth/login", data);
   } catch (exception) {
     return {
+      console.log("error 204"),
       error: true,
       exception,
     };
