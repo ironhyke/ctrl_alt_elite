@@ -4,7 +4,7 @@ import { logout } from "./shared/utils/auth";
 const apiClient = axios.create({
   baseURL: "https://ctrl-alt-elite-6lbt.onrender.com/api"
 ",
-  timeout: 1000,
+  timeout: 10000,
 });
 
 apiClient.interceptors.request.use(
