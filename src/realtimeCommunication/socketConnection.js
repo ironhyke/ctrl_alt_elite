@@ -11,10 +11,14 @@ import * as webRTCHandler from "./webRTCHandler";
 
 let socket = null;
 
+// Automatically pick backend URL based on environment
+const SOCKET_SERVER_URL =
+  process.env.REACT_APP_SOCKET_URL || process.env.REACT_APP_API_URL || "http://localhost:5002";
+
 export const connectWithSocketServer = (userDetails) => {
   const jwtToken = userDetails.token;
 
-  socket = io("http://localhost:5002", {
+  socket = io(SOCKET_SERVER_URL, {
     auth: {
       token: jwtToken,
     },
